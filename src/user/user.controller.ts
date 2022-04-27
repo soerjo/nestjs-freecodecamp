@@ -1,5 +1,4 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { User } from '@prisma/client';
 import { GetUser } from 'src/common/decorator/getUser.decorator';
 import { JwtGuard } from 'src/common/guard';
 import { UserService } from './user.service';
@@ -12,6 +11,6 @@ export class UserController {
   @UseGuards(JwtGuard)
   @Get()
   getMe(@GetUser('email') email: string) {
-    return { email: email };
+    return { email };
   }
 }
