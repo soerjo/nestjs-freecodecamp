@@ -12,7 +12,8 @@
 
 - docker
 - nestjs structure
-- typeorm
+- prisma for orm
+- argon2 for hash
 - typescript
 - validation
 - interceptor
